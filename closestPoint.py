@@ -9,49 +9,16 @@ import pandas as pd
 
 
 def getData():
-     """
-     Asks the user for the name of the CSV and
-     Returns a dataframe of the contents.
-     """
-     
-     df = None #<-- placeholder, can remove once defined.
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################
-
-     return(df)
+    return(pd.read_csv(input("Enter the CSV file: ")))
 
 def getColumnNames():
-     """
-     Asks the user for the exact name of the columns that
-     contains the latitude and longitude and
-     Returns those values as a tuple.
-     """
-
-     latName, lonName = "", "" #<-- placeholder, can remove once defined.
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################
-    
-     return(latName,lonName)
- 
-
+    lat = input("Enter latitude column name: ")
+    lon = input("Enter longitude column name: ")
+    return((lat, lon))
 def getLocale():
-     """
-     Asks the user for latitude and longitude of the user's current location and
-     Returns those floating points numbers.
-
-     """
-
-     lat, lon = 0.0,0.0      #<-- placeholder, can remove once defined.
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ###################################   
-
-     return(lat, lon)
+    cLat = float(input("Enter current latitude: "))
+    cLon = float(input("Enter current longitude: "))
+    return(cLat, cLon)
 
 def computeDist(x1,y1,x2,y2):
      """
@@ -64,7 +31,7 @@ def computeDist(x1,y1,x2,y2):
      ### FILL IN YOUR CODE HERE      ###
      ###################################
 
-     return(d)
+     return(float((x1-x2)**2 + (y1-y2)**2))
 
 
 ######################################################################
