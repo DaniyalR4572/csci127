@@ -14,12 +14,9 @@ def average(region):
      
      red, green, blue = 0,0,0  #<-- placeholder, can remove once defined.
 
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ### Other than your name above, ###
-     ### this is the only section    ###
-     ### you change in this program. ###
-     ###################################
+     red = np.average(region[:,:,0])
+     green = np.average(region[:,:,1])
+     blue = np.average(region[:,:,2])
 
 
      return(red,green,blue)
@@ -31,13 +28,9 @@ def setRegion(region, r,g,b):
      red values of r, green values of g, and blue values of b.
      """
      
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ### Other than your name above, ###
-     ### this is the only section    ###
-     ### you change in this program. ###
-     ###################################
-
+     region[:,:,0] = r
+     region[:,:,1] = g
+     region[:,:,2] = b
 
 
 
